@@ -81,7 +81,6 @@ class App(tk.Tk):
                         f"Process completed in {int(hour)}h {int(minutes)}m {int(seconds)}s.",
                     )
 
-            # Run the download and merge process in a separate thread
             download_thread = threading.Thread(target=download_task)
             download_thread.start()
 

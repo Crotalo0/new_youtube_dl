@@ -1,4 +1,3 @@
-# popup_manager.py
 import tkinter as tk
 from tkinter import ttk
 
@@ -10,7 +9,6 @@ class PopupManager:
         self.progress_bar = None
 
     def show_progress_popup(self, title="Progress", message=""):
-        """Show a popup with a progress bar."""
         if self.popup is not None:
             self.close_popup()
 
@@ -32,13 +30,11 @@ class PopupManager:
         self.progress_bar.start(10)
 
     def update_progress(self, value):
-        """Update the progress bar value."""
         if self.progress_bar:
             self.progress_bar["value"] = value
             self.progress_bar.update()
 
     def close_popup(self):
-        """Close the popup window."""
         if self.popup is not None:
             self.progress_bar.stop()
             self.popup.destroy()
